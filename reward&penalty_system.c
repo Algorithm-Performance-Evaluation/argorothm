@@ -75,8 +75,8 @@ TreeNode* new_node(element item)
 	TreeNode* temp = (TreeNode*)malloc(sizeof(TreeNode));//노드 동적할당
 	
 	temp->key = item;
-	temp->left = temp->right = NULL;
-	
+	temp->left = temp->right = NULL; 
+	printf("학생 등록 완료");
 	return temp;
 }
 
@@ -153,6 +153,7 @@ int main()
 	int command;
 	element e;
 	TreeNode* root = NULL;
+	TreeNode* r = NULL;
 	TreeNode* tmp;
 	do
 	{
@@ -170,7 +171,6 @@ int main()
 				scanf(" %d",&e.number);
 				e.point = 0;
 				root =  insert_node(root, e);
-				printf("학생 등록 완료되었습니다.");
 				break; 
 			case 2:
 				printf("학번: ");
